@@ -51,14 +51,20 @@ const Hero = () => {
             </motion.p>
           </a>
 
-          {/* Tombol-tombol */}
-          <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-10 py-4 rounded-full font-bold transition-all transform hover:scale-105 shadow-xl">
+          {/* Tombol-tombol SUDAH DIPERBAIKI (Menggunakan tag <a>) */}
+          <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-8">
+            <a 
+              href="#rooms"
+              className="bg-emerald-600 hover:bg-emerald-700 text-white px-10 py-4 rounded-full font-bold transition-all transform hover:scale-105 shadow-xl cursor-pointer"
+            >
               Booking Sekarang
-            </button>
-            <button className="border border-white/30 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white px-10 py-4 rounded-full font-bold transition-all">
+            </a>
+            <a 
+              href="#amenities"
+              className="border border-white/30 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white px-10 py-4 rounded-full font-bold transition-all cursor-pointer"
+            >
               Lihat Fasilitas
-            </button>
+            </a>
           </div>
         </motion.div>
       </div>
