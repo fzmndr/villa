@@ -2,15 +2,19 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ParallaxItem from "./ParallaxItem";
 
+
+import bgVilla from '../public/villa1.jpg';
+
 const Hero = () => {
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-slate-900">
       
-      {/* Background Container - Gambar dikembalikan seperti semula */}
+      {/* Background Container */}
       <div className="absolute inset-0 z-0">
         <ParallaxItem distance={100}>
+          {/* 2. PANGGIL VARIABEL GAMBARNYA DI DALAM src */}
           <img 
-            src="../public/villa1.jpg" 
+            src={bgVilla} 
             className="w-full h-[120%] object-cover" 
             alt="Luxury Villa Background" 
           />
@@ -37,7 +41,7 @@ const Hero = () => {
               transition={{ type: "spring", stiffness: 300 }}
               className="text-5xl md:text-8xl font-bold mb-8 leading-[1.1] group-hover:text-emerald-50 transition-colors"
             >
-              Kemewahan Alam <br /> di Jantung Bali.
+              Kemewahan Alam <br /> di Jantung Puwakarta.
             </motion.h1>
           </a>
 
