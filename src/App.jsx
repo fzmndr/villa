@@ -17,20 +17,23 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 2500);
+    // Pastikan loading screen muncul minimal 2 detik untuk transisi yang halus
+    const timer = setTimeout(() => setIsLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <SmoothScroll>
+      {/* Jika masih blank, coba matikan CustomCursor & ScrollProgress sementara untuk testing */}
       <CustomCursor /> 
       <ScrollProgress />
       
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {isLoading && <LoadingScreen key="loading" />}
       </AnimatePresence>
 
-      <div className="min-h-screen bg-slate-50 font-sans">
+      {/* Gunakan wrapper utama agar struktur HTML lebih semantik */}
+      <main className="min-h-screen bg-slate-50 font-sans">
         <Navbar />
         <Hero />
         <Amenities />
@@ -39,7 +42,7 @@ function App() {
         <AIAssistant />
         <Footer />
         <WhatsAppFloating />
-      </div>
+      </main>
     </SmoothScroll>
   );
 }
