@@ -6,20 +6,20 @@ const Hero = () => {
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-slate-900">
       
-      {/* Background Container */}
+      {/* Background Container - Gambar dikembalikan seperti semula */}
       <div className="absolute inset-0 z-0">
-        <ParallaxItem distance={150}>
+        <ParallaxItem distance={100}>
           <img 
-            src="/villa1.jpg" 
-            className="w-full h-[140%] object-cover opacity-60" 
+            src="../public/villa1.jpg" 
+            className="w-full h-[120%] object-cover" 
             alt="Luxury Villa Background" 
           />
         </ParallaxItem>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-slate-900/40" />
+        <div className="absolute inset-0 bg-black/30" />
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center text-white">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -35,7 +35,7 @@ const Hero = () => {
             <motion.h1 
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="text-5xl md:text-8xl font-bold text-white mb-8 leading-[1.1] group-hover:text-emerald-50 transition-colors"
+              className="text-5xl md:text-8xl font-bold mb-8 leading-[1.1] group-hover:text-emerald-50 transition-colors"
             >
               Kemewahan Alam <br /> di Jantung Bali.
             </motion.h1>
@@ -51,7 +51,7 @@ const Hero = () => {
             </motion.p>
           </a>
 
-          {/* Tombol-tombol SUDAH DIPERBAIKI (Menggunakan tag <a>) */}
+          {/* Tombol-tombol dengan link navigasi */}
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-8">
             <a 
               href="#rooms"
