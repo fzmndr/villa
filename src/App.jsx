@@ -27,11 +27,11 @@ function App() {
       <Navbar />
       <Hero />
       <Amenities />
-      <Gallery />
-      <RoomSection />
-      <AIAssistant />
+     {/* <Gallery /> */}
+      {/* <RoomSection /> */}
+      {/* <AIAssistant /> */}
       <Footer />
-      <WhatsAppFloating />
+      {/* <WhatsAppFloating /> */}
     </div>
   );
 }
